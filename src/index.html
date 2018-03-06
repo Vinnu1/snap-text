@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SnapText</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <!-- NAME MODAL -->
+
+  <div class="modal" id="nameModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enter your name for chatroom (leave blank for anonymous)</h5>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" placeholder="Enter Name" id="name">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary text-white" id="nameButton">Enter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MESSAGE BOX -->
+  <div class="container-fluid fixed-top content height-90">
+    <div class="row">
+      <div class="col" id="msgBox">
+
+      </div>
+    </div>
+  </div>
+  <!-- SEND AREA -->
+  <div class="container-fluid height-10 fixed-bottom bg-dark text-light">
+    <div class="mt-2">
+      <input class="form-control width-90 d-inline" id="msg">
+      <button class="btn btn-secondary text-light" id="rq">RQ</button>
+      <button class="btn btn-success" id="send">Send</button>
+    </div>
+  </div>
+
+</body>
+
+</html>

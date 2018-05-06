@@ -4,7 +4,7 @@
   "description": "Chatroom applications where messages get erased in 1 min.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js" 
+    "start": "node server.js"
   },
   "dependencies": {
     "ejs": "^2.5.6",

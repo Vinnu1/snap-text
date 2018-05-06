@@ -32,6 +32,9 @@ document.addEventListener("DOMContentLoaded",function(){
     
     //send button clicked
     send.addEventListener("click",function(){
+        if(msg.value == ""){
+            return;
+        }
         let container = document.createElement("div");
         let text = document.createElement("span");
         container.classList.add("mt-2","text-right");
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded",function(){
         container.appendChild(text);
         msgBox.appendChild(container);
         socket.emit("message",msg.value,Name);
+        msg.value = "";
         setTimeout(function(){
             container.remove();
         },60000);

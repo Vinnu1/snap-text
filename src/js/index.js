@@ -28,10 +28,7 @@ document.addEventListener("DOMContentLoaded",function(){
         $("#nameModal").modal("hide");
     });
     
-    
-    
-    //send button clicked
-    send.addEventListener("click",function(){
+    function sendMessage(){
         if(msg.value == ""){
             return;
         }
@@ -47,11 +44,21 @@ document.addEventListener("DOMContentLoaded",function(){
         setTimeout(function(){
             container.remove();
         },60000);
+    }
+    
+    
+    //send button clicked
+    send.addEventListener("click",sendMessage);
+    msg.addEventListener("keypress",function(e){
+        let key = e.keyCode || e.which;
+        if(key == 13){
+            sendMessage();
+        }
     });
 
     //When RQ (random quote) button is clicked.
     rq.addEventListener("click",function(){
-        var rand = Math.floor(Math.random()*100);
+        let rand = Math.floor(Math.random()*100);
         let rquote = quotes[rand].quote+" -"+quotes[rand].author;
         let container = document.createElement("div");
         let text = document.createElement("span");

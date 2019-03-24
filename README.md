@@ -8,5 +8,3 @@ npm install
 npm start
 
 It will most probably open on 3000 port.
-
-Live application [here](https://snap-text.herokuapp.com/)

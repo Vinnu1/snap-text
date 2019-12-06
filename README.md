@@ -1,5 +1,5 @@
 # snap-text
-A chatroom application where messages delete in 1 min and one can send random quotes as well. 
+A chatroom application where messages delete in 1 min and one can send random quotes as well
 
 # Steps
 
